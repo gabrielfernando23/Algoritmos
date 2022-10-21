@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+<body>
+    <h1>Calculadora Auxílio Filhos</h1>
+Filhos com menos de 10 anos: <input id="under_10"><br>
+Filhos a partir de 10 anos: <input id="over_10"><br>
+<button onclick="Calculo()">Calcular Auxílio Filhos</button>
+<div id="div"></div>
+</body>
+</html>
+<script>
+function Calculo() {
+    var menos_10 = under_10.value * 30.0
+    var mais_10 = over_10.value * 20.0
+    var auxilio = menos_10 + mais_10
+    div.innerHTML = 'Você tem ' + under_10.value + ' filhos menores de 10 anos e ' + over_10.value + ' filhos a partir de 10 anos, logo, seu "Auxílio Filhos" será de ' + auxilio
+}
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+<input id="Saldo_ant" placeholder="Saldo Anterior"><br>
+<input id="Deb" placeholder="Valor de débito"><br>
+<input id="cred" placeholder="Valor de Crédito"><br>
+<button onclick="Calcular()">Calcular</button>
+<div id="div"></div>
+</body>
+</html>
+<script>
+function Calcular() {
+    var SaldoFinal = Number(Saldo_ant.value) + Number(cred.value) -
+        Number(Deb.value)
+    var Dif = Saldo_ant.value - SaldoFinal
+    var prop = ((SaldoFinal/Saldo_ant.value)*100)
+    div.innerHTML = `Saldo Anterior:${Saldo_ant.value} <br>
+    Movimentação:${cred.value - Deb.value} <br>
+    Saldo Final:${SaldoFinal} <br>
+    Diferença:${Dif} <br>
+    Proporção:${prop}% <br>`
+Saldo_ant.value = ''
+Deb.value = ''
+cred.value = ''
+}
+
+</script>

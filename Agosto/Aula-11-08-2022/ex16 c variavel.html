@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+<body>
+    Moedas depositadas Huguinho<input id="Huguinho"><br>
+    Moedas depositadas Zezinho<input id="Zezinho"><br>
+    Moedas depositadas Luizinho<input id="Luizinho"><br>
+    <button onclick="Calcular()">Calcular</button>
+    <div id="div"></div>
+</body>
+</html>
+<script>
+    function Calcular() {
+        var little_Hugo = Huguinho.value / 2
+        var little_Ze = Zezinho.value / 2
+        var little_Luiz = Luizinho.value / 2
+    div.innerHTML = 'O Huguinho economizou ' + little_Hugo + ' pois fez ' + (Huguinho.value) + ' depósitos. <br>' +
+   'O Zezinho economizou ' + little_Ze + ' pois fez ' + (Zezinho.value) + ' depósitos. <br>' +
+   'O Luizinho economizou ' + little_Luiz + ' pois fez ' + (Luizinho.value) + ' depósitos.'
+}
+
+</script>

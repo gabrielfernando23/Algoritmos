@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    <input id="vista" placeholder="Valor a vista"><br>
+    <input id="Taxa" placeholder="Taxa de Juros a.m"><br>
+    <input id="quant" placeholder="Quantidade de parcelas"><br>
+    <button onclick="Calc()">Calcular prejú</button>
+    <div id="div"></div>
+</body>
+</html>
+<script>
+function Calc() {
+    var p_termo = vista.value / quant.value
+    var taxa_pct = (Taxa.value / 100) + 1
+    var valor_total = p_termo * (((taxa_pct ** quant.value) - 1) / (taxa_pct - 1))
+    var carros = valor_total / vista.value
+    div.innerHTML = `Seu carro vai sair por um total de R$${valor_total.toFixed(2)}.
+     Após 1 mês, ele já vai valer só R$${vista.value * 0.80}.
+      Porque comprou financiado, vai pagar o correspondente a ${carros.toFixed(1)}  carros.`
+}
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXercicio 08</title>
+</head>
+<body>
+    Digite o tempo que as torneiras ficaram pingando: <br>
+    Torneira 1<input id="torneira_1" ><br>
+    Torneira 2<input id="torneira_2" ><br>
+    Torneira 3<input id="torneira_3" ><br>
+    <button onclick="ipt_Calcular()">Calcular Desperdício</button>
+</body>
+</html>
+<script>
+function ipt_Calcular() {
+    alert('Suas 3 torneiras, juntas, desperdiçaram '+
+     (Number(torneira_1.value* 15) + Number(torneira_2.value * 15) + Number(torneira_3.value* 15))
+      + ' L juntas')   
+}
+</script>

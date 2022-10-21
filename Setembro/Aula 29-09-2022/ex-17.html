@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    Quantas pessoas vão entrar no carro:<input id="ipt_entrar"><br>
+    Quantos passageiros o carro comporta:<input id="ipt_comporta"><br>
+    <button onclick="carona()">#Partiu Carona</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function carona() {
+        var entrada = ipt_entrar.value
+        var maximo = ipt_comporta.value
+        var contador = 1
+        while (contador <= maximo) {
+            if (contador == 1) {
+                msg.innerHTML += `Entrou o ${contador}° passageiro (que é o(a) motorista)<br>`
+                contador++;
+            }
+            if (contador <= entrada) {
+                msg.innerHTML += `Entrou o ${contador}° passageiro<br>`
+                contador++
+            } 
+            else {
+                msg.innerHTML += `O ${contador}° passageiro terá que esperar<br>`
+                contador++
+            }
+        }
+    }
+</script>

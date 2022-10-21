@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+<input id="nome" placeholder="Nome do Produto"><br>
+<input id="quant" placeholder="Quantidade"><br>
+<input id="unit" placeholder="Preço Unitário"><br>
+<button onclick="calcular()">Calcular preço e margem de venda</button>
+<div id="div"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var preco_venda = Number(unit.value) + (unit.value * 0.22)
+        var venda_total = preco_venda * quant.value
+        var lucro_total = (unit.value * 0.22) * quant.value
+        div.innerHTML = `Nome do Produto:${nome.value} <br>
+        Quantidade:${quant.value} <br>
+        preço unitário de compra:${unit.value} <br>
+        preço unitário de venda:${preco_venda} <br>
+        valor de venda total:${venda_total} <br>
+        lucro total do produto:${lucro_total} <br>
+        preço unitário tributado:${Number(unit.value) + 1.25} <br>`
+    }
+
+
+</script>

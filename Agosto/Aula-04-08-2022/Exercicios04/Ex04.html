@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+    <br>
+    Digite sua Nota: 
+    <input id=ipt_Nota type="text">
+    <br>
+    <button onclick="Mae()">Opinião da Mãe</button>
+    <button onclick="Vo()">Opinião da Vó</button>
+</body>
+</html>
+<script>
+   
+    function Mae() {
+     alert('Não fez mais que tua obrigação com essa nota ' + ipt_Nota.value)
+}
+    function Vo() {
+     alert('Muito bem, que neto inteligente, porque tirou ' + ipt_Nota.value)
+}
+</script>

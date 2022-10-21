@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Migas Exercicio 4</title>
+</head>
+<body>
+    <h1>4 Migas</h1>
+    <h2>Bem Vindo</h2>
+    Peso:<input id="peso" placeholder="(gramas)"><br>
+    Preço:<input id="preco" placeholder="Preço por grama"><br>
+    Cobertura:<input id="cobertura" placeholder="Cobertura"><br>
+    Para Chocolate use "C" e para Morango use "M"<br>
+    Tipo de sorvete:<input id="tipo" ><br>
+    Use "G" para Gourmet e "N" para Normal <br>
+    <button onclick="Calcular()">Calcular</button>
+    <div id="div"></div>
+</body>
+</html>
+<script>
+function Calcular() {
+var grama = Number(preco.value)
+var calda = cobertura.value
+    if (calda != "C") {
+        grama += 0.01}
+    if (tipo.sorvete == "G")
+     { grama *= 1.11}
+    else { grama *= 0.90}
+var preco_total = grama * peso.value
+    if (preco_total > 10) {
+        div.innerHTML = `O seu sorvete vai custar ${preco_total.toFixed(2)} e vai comprometer a mesada`
+        
+    }
+    else {div.innerHTML = `Hoje você esta maneirando. Gastou somente ${preco_total.toFixed(2)}`}
+        
+peso.value = ''
+preco.value = '' 
+}
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    <h1>Consulta de economia bilhete unico</h1>
+    <br>
+    Digite o valor da passagem:
+    <input id="valor_passagem" type="text">
+    <br>
+    <br>
+    Digite a quantidade de viagens que você faz por Mês:
+    <input id="Quant_Viagens" type="text">
+    <br>
+    <br>
+    <button onclick="Calcular()">Ver economia</button>
+</body>
+</html>
+<script>
+    function Calcular() {
+        alert('Você economizará R$' + (valor_passagem.value * Quant_Viagens.value / 2) + ' Por Mês')
+        
+    }
+
+
+</script>

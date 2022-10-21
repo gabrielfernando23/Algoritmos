@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <input id="qtd" placeholder="Quantidade de kWh/mês"><br>
+    <button onclick="Calcular()">Calcular conta de luz</button>
+    
+</body>
+</html>
+<script>
+function Calcular() {
+    var preco = 0
+    preco = qtd.value * 0.85
+    if (qtd.value < 100) {
+        alert(`A conta deu ${preco * 0.90}`)
+    } else {
+        alert(`A conta deu ${preco}`)
+    }
+    
+}
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <input id="renda" placeholder="Renda Familiar"><br>
+    <input id="prest" placeholder="Prestação"><br>
+    <button onclick="Porcentagem()">Verificar Financiamento</button>
+    <div id="renda_comprometida"></div>
+</body>
+</html>
+<script>
+function Porcentagem() {
+    var porcent = 0
+    porcent = prest.value / renda.value * 100
+    renda_comprometida.innerHTML = `a prestação corresponde a ${porcent.toFixed(2)}% da renda familiar`
+    if (porcent > 30) {
+        renda_comprometida.innerHTML += `<br> <font color="red"><b>Será necessário complementar a renda familiar </font> </b>`
+
+    }
+}
+
+</script>

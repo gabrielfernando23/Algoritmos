@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    Digite sua primeira nota:<input id="nota1"><br>
+    Digite sua segunda nota:<input id="nota2"><br>
+    Digite sua terceira nota:<input id="nota3"><br>
+    <button onclick="media()">Classificar aluno</button>
+</body>
+</html>
+<script>
+function media() {
+    var media_aluno = (Number(nota1.value) + Number(nota2.value) + Number(nota3.value)) / 3
+    if (media_aluno < 5) {
+        alert('Aluno precisa de muita ajuda')
+    }
+    else if (media_aluno <= 7){
+        alert('Aluno na média')
+    }
+    else if (media_aluno <= 9.5) {
+        alert('Aluno acima da média')
+    }
+     else {
+        alert('Aluno fora da curva')
+    }
+}
+</script>

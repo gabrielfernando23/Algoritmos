@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - 14</title>
+</head>
+<body>
+    Digite sua idade:<input id="ipt_idade" placeholder="Digite um número menor que 100">
+    <button onclick="tempo()">Contagem</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function tempo() {
+        var idade = ipt_idade.value
+        contador = 0
+        msg.innerHTML = ''
+        while (contador <= idade) {
+            if (contador <= 4) {
+            msg.innerHTML += `<br>${contador} anos(Primeira Infância)`
+            contador++;    
+            }
+            else if(contador > 4 && contador <= 6){
+                msg.innerHTML += `<br>${contador} anos(Pré-escolar)`
+            contador++;
+            }
+            else if(contador > 6 && contador <= 10){
+                msg.innerHTML += `<br>${contador} anos(Segunda Infância)`
+            contador++;
+            }
+            else if(contador > 10 && contador <= 18){
+                msg.innerHTML += `<br>${contador} anos(Adolescência)`
+            contador++;
+            }
+            else if(contador > 18 && contador <= 50){
+                msg.innerHTML += `<br>${contador} anos(Adulto)`
+            contador++;
+            }
+            else if(contador > 50 && contador <= 100){
+                msg.innerHTML += `<br>${contador} anos(Melhor idade)`
+            contador++;
+            }
+            else{
+            msg.innerHTML += `<br>${contador} anos(Matusalem)`
+            contador++;
+            }
+            
+        }
+    }
+</script>

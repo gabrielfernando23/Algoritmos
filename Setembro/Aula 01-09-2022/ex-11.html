@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    Digite o mês do ano:<input id="mes"><br>
+    <button onclick="estacao()">exibir</button><br>
+    <div id="ano"></div>
+</body>
+</html>
+<script>
+function estacao() {
+    if (mes.value == 'março') {
+        ano.innerHTML = `Outono`
+    } 
+    else if (mes.value == 'abril') {
+        ano.innerHTML = `Outono`
+    }
+    else if (mes.value == 'maio') {
+        ano.innerHTML = `Outono`
+    }
+    else if (mes.value == 'junho') {
+        ano.innerHTML = 'inverno'
+    }
+    else if (mes.value == 'julho') {
+        ano.innerHTML = 'inverno'
+    }
+    else if (mes.value == 'agosto') {
+        ano.innerHTML = 'inverno'
+    }
+    else if (mes.value == 'setembro') {
+        ano.innerHTML = `Primavera`
+    }
+    else if (mes.value =='outubro') {
+        ano.innerHTML = `Primavera`
+    }
+    else if (mes.value == 'novembro') {
+        ano.innerHTML = `Primavera`
+    }
+    else {
+        ano.innerHTML = `Verão`
+    }
+}
+</script>

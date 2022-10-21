@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <br>
+    Digite seu peso(Kg):<input id="ipt_peso"><br>
+    Digite sua altura(Metros):<input id="ipt_altura"><br>
+    <button onclick="imc_homem()">IMC Homem</button>
+    <button onclick="imc_mulher()">IMC Mulher</button>
+    <div id="div_msg">IMC = </div>
+</body>
+</html>
+<script>
+function imc_homem() {
+    div_msg.innerHTML = 'IMC: ' + (ipt_peso.value / ipt_altura.value ** 2)
+    
+}
+function imc_mulher() {
+    div_msg.innerHTML = 'IMC: ' + ((ipt_peso.value / ipt_altura.value ** 2) * 0.9)
+    
+}
+</script>

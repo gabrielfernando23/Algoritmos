@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    Sabor da Pizza:<input id="ipt_sabor"><br>
+    <select id="sel_ingr1">
+        <option value="12">Queijo</option>
+        <option value="13.50">Presunto</option>
+        <option value="10">Ovo</option>
+        <option value="11">Palmito</option>
+        <option value="14.50">Frango</option>
+        <option value="13">Catupiry</option>
+    </select><br>
+    <select id="sel_ingr2">
+        <option value="12">Queijo</option>
+        <option value="13.50">Presunto</option>
+        <option value="10">Ovo</option>
+        <option value="11">Palmito</option>
+        <option value="14.50">Frango</option>
+        <option value="13">Catupiry</option>
+    </select><br>
+    <select id="sel_ingr3">
+        <option value="12">Queijo</option>
+        <option value="13.50">Presunto</option>
+        <option value="10">Ovo</option>
+        <option value="11">Palmito</option>
+        <option value="14.50">Frango</option>
+        <option value="13">Catupiry</option>
+    </select><br>
+    <button onclick="calc()">Calcular preço da pizza</button>
+    <div id="preco"></div>
+</body>
+</html>
+<script>
+function calc() {
+    var sabor = ipt_sabor.value
+    var ingrediente1 = Number(sel_ingr1.value)
+    var ingrediente2 = Number(sel_ingr2.value)
+    var ingrediente3 = Number(sel_ingr3.value)
+    var preco_pizza = ingrediente1 + ingrediente2 + ingrediente3
+    preco.innerHTML = `A pizza de ${sabor} vai custar um total de R$${preco_pizza} `
+}
+</script>

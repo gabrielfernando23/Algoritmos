@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body>
+    <h1>Eleições SP Tech</h1>
+<br>
+Votos Zé Buduia: <input id="Ze"><br>
+Votos Maria Bigodenha: <input id="Maria"><br> 
+Votos Brancos: <input id="Branco"> <br>
+Votos Nulos: <input id="Nulo"><br>     
+<button onclick="resultado()">Resultado da Eleição</button>
+<div id="div"></div>
+</body>
+</html>
+<script>
+function resultado() {
+    var total_votos = Number(Ze.value) + Number(Maria.value) + Number(Branco.value) + Number(Nulo.value)
+    var Invalidos = Number(Branco.value) + Number(Nulo.value)
+    var Invalidos_porcentagem = Invalidos / total_votos * 100
+    var Ze_porcentagem = (Ze.value / total_votos) * 100
+    var Maria_porcentagem = (Maria.value / total_votos) * 100
+
+    div.innerHTML = 'Total de votos: ' + total_votos + '<br>'
+     + 'Zé Buduia: ' + Ze_porcentagem + '%' + '(' + Ze.value + ')' + '<br>'
+     + 'Maria Bigodenha: ' + Maria_porcentagem + '%' + '(' + Maria.value + ')' + '<br>'
+     + 'Inválidos: ' + Invalidos_porcentagem + '%' + '(' + Invalidos + ')'
+}
+
+</script>

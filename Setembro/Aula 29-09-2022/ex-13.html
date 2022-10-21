@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    De quantos em quantos dias você treina?<input id="ipt_vezes" placeholder="(apenas um número)"><br>
+    <button onclick="exibir()">Exibir rotina mensal</button><br>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function exibir() {
+        var dias = Number(ipt_vezes.value)
+        var musc = 'Musculação'
+        var desc = 'Comer, dormir etc'
+        var contador = 1
+        var dias_musc = 0
+        msg.innerHTML = `Dia 1 -${musc}<br>`
+        dias_musc = dias
+        while (contador < 30) {
+           if (dias_musc == contador) {
+               contador++;
+               msg.innerHTML += `Dia ${contador}- ${musc}<br>`
+                dias_musc += dias;
+           }
+            else{
+                contador++;
+                msg.innerHTML += `Dia ${contador}- ${desc}<br>`
+            }
+            
+            
+        }
+    }
+</script>

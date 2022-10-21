@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+    Informe quantos pães franceses comeu:<input id="pao"><br>
+    E agora quantas casquinhas:<input id="casquinha"><br>
+    <br>
+    Informe quantos minutos correu: <input id="caminhada"><br>
+    E agora quantos minutos de musculação: <input id="musculacao"><br>
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="saldo"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var calorias_ganhas = (Number(pao.value) * 100) + (Number(casquinha.value) * 300)
+        var calorias_queimadas = (Number(caminhada.value) * 50) + (Number(musculacao.value) * 30)
+        saldo.innerHTML ='Entre calorias que ganhou e perdeu, seu saldo de calorias no dia é de ' + (calorias_ganhas - calorias_queimadas)
+        
+    }
+
+
+</script>

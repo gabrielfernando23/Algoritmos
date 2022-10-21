@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+Valor da grama:<input id="ipt_grama"><br>
+Peso do sorvete:<input id="ipt_peso"><br>
+<button onclick="calc()">Calcular preço</button>
+<div id="div"></div>
+</body>
+</html>
+<script>
+function calc() {
+    var peso = Number(ipt_peso.value)
+    var preco = Number(ipt_grama.value) 
+    var preco_final = preco * peso
+    if (preco_final > 10) {
+        div.innerHTML = `Esse sorvete vai custar ${preco_final.toFixed(2)} e vai comprometer a mesada.`
+    }
+    else{
+    div.innerHTML = `Hoje você está manerando, gastou somente ${preco_final.toFixed(2)}.`
+    }
+}
+
+</script>

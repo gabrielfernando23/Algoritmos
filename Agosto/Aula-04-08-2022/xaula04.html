@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula4</title>
+</head>
+<body>
+    Entre com o seu nome:
+    <input id="ipt_Nome" type="text">
+    <br>
+    Entre com o sobrenome:
+    <input id="ipt_Sobrenome" type="text">
+    <br>
+    <button onclick="MostrarSeparado()">Separado</button>
+    <button onclick="MostrarJunto()">Junto</button>
+</body>
+</html>
+<script>
+    function MostrarSeparado() {
+        alert('O Primeiro nome é: ' + ipt_Nome.value)
+        alert('O Sobrenome é: ' + ipt_Sobrenome.value)
+    }
+    function MostrarJunto() {
+        alert(ipt_Nome.value + ' ' + ipt_Sobrenome.value)
+    }
+</script>
