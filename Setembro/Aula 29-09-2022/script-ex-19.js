@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 19</title>
-</head>
-<body>
-    Quantos ônibus?<input id="ipt_onibus"><br>
-    Quantos trens?<input id="ipt_trem"><br>
-    Quantos metrôs?<input id="ipt_metro"><br>
-    <button onclick="trajeto()">#Partiu Trajeto</button>
-    <div id="bus" style="color:red"></div>
-    <div id="train" style="color:green"></div>
-    <div id="subway" style="color:blue"></div>
-</body>
-</html>
-<script>
 function trajeto() {
     var onibus = Number(ipt_onibus.value)
     var trem = Number(ipt_trem.value)
@@ -73,4 +54,3 @@ function trajeto() {
         }
     
     }
-</script>
