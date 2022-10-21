@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elefante</title>
+</head>
+<body>
+    Quantidade de elefantes:<input id="ipt_elef">
+    <button onclick="ataz()">Atazanar médium</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function ataz() {
+        var elefantes = Number(ipt_elef.value)
+        var incomodam = "incomodam, "
+        var incomodam2 = "incomodam, "
+        var contador = 1
+        msg.innerHTML = ''
+        while (contador < elefantes) {
+            contador++;
+            msg.innerHTML += `<br>1 elefante incomoda muita gente!`
+            if (contador > 1) {
+                msg.innerHTML += `<br>${contador} elefantes, ${incomodam += incomodam2} muito mais!`
+            }
+        }
+    }
+</script>

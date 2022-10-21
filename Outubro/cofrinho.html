@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofrinho</title>
+</head>
+<body>
+    <h1>Cofrinho</h1><br>
+    Quanto você tem guardado?<input id="ipt_guard"><br>
+    Quanto você irá guardar por mês?<input id="ipt_mes"><br>
+    Por quantos meses?<input id="ipt_meses"><br>
+    <button onclick="validar()">Guardar</button>
+    <div id="cash"></div>
+</body>
+</html>
+<script>
+    function validar() {
+        if (ipt_mes.value <= 0) {
+            alert('O Valor poupado mensalmente precisa ser maior que 0!')
+        }
+        else if (ipt_meses.value < 6 || ipt_meses.value > 20) {
+            alert('A quantidade de meses deve ser estar entre 6 e 20!')
+        }
+        else{guardar();}
+    }
+    function guardar() {
+    var guardar = Number(ipt_guard.value)
+    var mes = Number(ipt_mes.value)
+    var meses = Number(ipt_meses.value)
+    var contador = 0
+    var total = guardar
+    cash.innerHTML = ''
+    while (contador < meses) {
+        contador++;
+        cash.innerHTML += `Marco tinha ${total}, depois do depósito do ${contador}º mês ele ficou com ${total += mes}<br>`
+        if (contador == meses) {
+            cash.innerHTML += `<br>Você começou com R$${guardar}<br> Durante os ${meses} meses você poupou R$${total - guardar}<br>E agora você tem: R$${total}`
+        }
+    }
+}
+</script>
