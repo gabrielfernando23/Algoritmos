@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de divisibilidade</title>
+</head>
+<body>
+    Limite Inferior:<input id="ipt_inf"><br>
+    Limite Superior<input id="ipt_sup"><br>
+    Primeiro número divisibilidade:<input id="ipt_prim"><br>
+    Segundo número divisibilidade:<input id="ipt_seg"><br>
+    <button onclick="validar()">Mostrar</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    var inferior = 0
+    var superior = 0
+    var primeiro_num = 0
+    var segundo_num = 0
+    var qtd_num = 0
+    var maior = 0
+    var menor = 0
+    var soma = 0
+function validar() {
+    inferior = Number(ipt_inf.value)
+    superior = Number(ipt_sup.value)
+    primeiro_num = Number(ipt_prim.value)
+    segundo_num = Number(ipt_seg.value)
+    if (inferior <= 20) {
+        alert('Limite inferior tem que ser maior que 20')
+    }
+    else if (superior <= inferior || superior >= 1000) {
+        alert('Limite superior invalido, verifique o conteúdo')
+    }
+    else if (primeiro_num < 3 || primeiro_num > 20) {
+        alert('Primeiro número de divisibilidade tem que estar entre 3 e 20')
+    }
+    else if (segundo_num < 3 || segundo_num > 20 || segundo_num == primeiro_num) {
+        alert('Segundo número de divisibilidade tem que estar entre 3 e 20 e ser diferente do primeiro')
+    }
+    else{div();}
+}
+function div() {
+    msg.innerHTML = ''
+    for (let index = inferior; index <= superior ; index++) {
+        if(index % primeiro_num == 0 && index % segundo_num == 0){
+            msg.innerHTML += `O número ${index} é divisível pelo primeiro e pelo segundo número<br>`
+            qtd_num++
+            maior = index
+            soma += index
+            if (menor == 0) {menor = index}
+        }
+        else if (index % primeiro_num == 0) {
+            msg.innerHTML += `O número ${index} é divisível pelo primeiro número<br>`
+            qtd_num++
+            maior = index
+            soma += index
+            if (menor == 0) {menor = index}
+        }
+        else if(index % segundo_num == 0) {
+            msg.innerHTML += `O número ${index} é divisível pelo segundo número<br>`
+            qtd_num++
+            maior = index
+            soma += index
+            if (menor == 0) {menor = index}
+        }
+         
+    }
+    if (qtd_num == 0) {
+        msg.innerHTML += `<br>***Não foram encontrados números divisíveis***<br>`
+    }
+    msg.innerHTML += `<br><b>ANÁLISE DOS NÚMEROS EXIBIDOS</b><br>
+                      Quantidade de números exibidos:${qtd_num}<br>
+                      Média dos números exibidos:${(soma / qtd_num).toFixed(1)}<br>
+                      Maior número exibidos:${maior}<br>
+                      Menor número exibidos:${menor}`
+}
+</script>
